@@ -1,4 +1,4 @@
-package com.test;
+package com.multithread;
 
 import java.util.LinkedList;
 
