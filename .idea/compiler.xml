@@ -10,9 +10,8 @@
         <module name="long" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="javatest" target="1.5" />
-      <module name="long" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="long" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
