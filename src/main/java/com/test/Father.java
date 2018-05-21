@@ -12,9 +12,15 @@ public class Father {
     public int getA() {
         return a;
     }
+    public Father() {
+        // TODO Auto-generated constructor stub
+        say();
+    }
 
+    public void say() {
+        System.out.println("I'm father");
+    }
     public static void main(String[] args) {
-        Father a=new Son();
-        System.out.println(a.getA());
+
     }
 }

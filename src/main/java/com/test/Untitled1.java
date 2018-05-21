@@ -8,7 +8,7 @@ class base1{
     public int get(){
         return i;
     }
-    private void set(){
+    private void set(){//把子类父类此方法改为public，在看结果！！！！！！！！！！！！！！！！！！！！！！！！！
         i=5;
     }
 }

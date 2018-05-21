@@ -1,25 +1,88 @@
 package com.test;
-import java.util.Scanner;
-import java.util.TreeMap;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+
 
 
 public class Test {
-    public final void yy(){}
-    public static int  gcd(int a,int b){
-        if(a<b){
-            int tmp=a;
-            a=b;
-            b=tmp;
+
+
+static public class Thread1 extends Thread{
+
+
+
+    public void run() {
+        File file =new File("/Users/adewin/Desktop/lsl");
+        StringBuilder result =new StringBuilder();
+        try {
+            BufferedReader br =new BufferedReader(new FileReader(file));
+            String s =null;
+            while((s =br.readLine()) != null) { //一次读一行内容
+                result.append(System.lineSeparator() +s);
+            }
+            br.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println( result);
+    }
+
+
+
+
+}
+
+
+
+    static public class Thread2 extends Thread{
+
+
+
+        public void run() {
+            File file =new File("/Users/adewin/Desktop/lsl");
+            StringBuilder result =new StringBuilder();
+            try {
+                BufferedReader br =new BufferedReader(new FileReader(file));
+                String s =null;
+                while((s =br.readLine()) != null) { //一次读一行内容
+                    result.append(System.lineSeparator() +s);
+                }
+                br.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println( result);
         }
 
-        if(b==0){
-            return a;
-        }
-        int h=a%b;
-        return gcd(b,h);
+
+
 
     }
+
+
+
     public static void main(String[] args) {
-        System.out.println(gcd(18,6));
+
+
+new Thread1().start();
+        new Thread2().start();
+
+
+
     }
+
+
+
+
+
+
 }
